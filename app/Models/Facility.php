@@ -11,6 +11,12 @@ class Facility extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'name',
+        'description',
+        'province_id'
+    ];
+
     public function areas(): HasMany
     {
         return $this->hasMany(Area::class);
