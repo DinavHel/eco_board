@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AreaController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,10 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::resource('facility', FacilityController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('area', AreaController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
 
