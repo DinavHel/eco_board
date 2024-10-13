@@ -29,5 +29,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('provinces');
+
+        Schema::table(table: 'facilities', callback: function (Blueprint $table) {
+            $table->dropColumn(columns: ['province_id']);
+        });
     }
 };
