@@ -20,11 +20,11 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::resource('facility', FacilityController::class)
+Route::resource('facilities', FacilityController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
 
-Route::resource('area', AreaController::class)
+Route::resource('areas', AreaController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
 

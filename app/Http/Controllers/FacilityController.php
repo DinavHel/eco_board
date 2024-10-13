@@ -17,7 +17,7 @@ class FacilityController extends Controller
     {
         $provinces = Province::all();
         $facilities = Facility::all();
-        return view(view: 'facility.index', data: [
+        return view(view: 'facilities.index', data: [
             'provinces' => $provinces,
             'facilities' => $facilities,
         ]);
@@ -49,7 +49,7 @@ class FacilityController extends Controller
 
         $facility->save();
 
-        return redirect(route('facility.index'));
+        return redirect(route('facilities.index'));
     }
 
     /**

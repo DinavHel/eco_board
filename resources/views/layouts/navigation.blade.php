@@ -16,6 +16,24 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('facilities.index')" :active="request()->routeIs('facilities.index')">
+                        {{ __('Instalacións') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('areas.index')" :active="request()->routeIs('areas.index')">
+                        {{ __('Áreas') }}
+                    </x-nav-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('sensors.index')" :active="request()->routeIs('sensors.index')">
+                        {{ __('Sensores') }}
+                    </x-nav-link>
+                </div>
             </div>
 
             <!-- Settings Dropdown -->
@@ -69,6 +87,18 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('facilities.index')" :active="request()->routeIs('facilities.index')">
+                {{ __('Instalacións') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('areas.index')" :active="request()->routeIs('areas.index')">
+                {{ __('Áreas') }}
+            </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('sensors.index')" :active="request()->routeIs('sensors.index')">
+                {{ __('Sensores') }}
             </x-responsive-nav-link>
         </div>
 

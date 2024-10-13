@@ -48,7 +48,7 @@ class AreaController extends Controller
 
         $area->save();
 
-        return redirect(route('area.index'));
+        return redirect(route('areas.index'));
     }
 
     /**

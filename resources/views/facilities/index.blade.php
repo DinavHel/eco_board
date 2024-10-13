@@ -2,7 +2,7 @@
     <div class="max-w-2xl mx-auto p-4 sm:p-6 lg:p-8">
         <div class="relative z-10" aria-labelledby="modal-title" role="dialog" aria-modal="true">
             <h2>Nova Instalación</h2>
-            <form method="POST" action="{{ route('facility.store') }}">
+            <form method="POST" action="{{ route('facilities.store') }}">
                 @csrf
                 <div>
                     <input type="text"
