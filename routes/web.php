@@ -3,6 +3,7 @@
 use App\Http\Controllers\AreaController;
 use App\Http\Controllers\FacilityController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SensorController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -24,6 +25,10 @@ Route::resource('facility', FacilityController::class)
     ->middleware(['auth', 'verified']);
 
 Route::resource('area', AreaController::class)
+    ->only(['index', 'store'])
+    ->middleware(['auth', 'verified']);
+
+Route::resource('sensors', SensorController::class)
     ->only(['index', 'store'])
     ->middleware(['auth', 'verified']);
 
